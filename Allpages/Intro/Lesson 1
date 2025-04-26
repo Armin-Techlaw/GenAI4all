@@ -1,0 +1,112 @@
+import streamlit as st
+
+st.set_page_config(page_title="Understanding Generative AI", page_icon="🤖", layout="wide")
+
+st.title("📚 Lecture Notes: Understanding Generative AI")
+
+with st.expander("### Introduction"):
+    st.info("Generative AI is a complex system that is both powerful and limited. Understanding its creation, functionality, and limitations helps us use it more effectively.")
+
+with st.expander("### Data: The Foundation of Generative AI"):
+    st.write("""
+    The first and most important step in developing generative AI is data. 
+    Models are trained on curated datasets sourced from various parts of the internet, not the entire internet.
+    """)
+    st.warning("""
+    ⚡ Training is resource-intensive: 
+    - 10 TB of text data
+    - 12 days of processing
+    - ~$2 million in cost
+    """)
+    st.write("""
+    Only major companies can afford to develop large-scale generative AI systems.
+    """)
+
+with st.expander("### Generative AI as a Reasoning Machine"):
+    st.success("Generative AI is not a knowledge database — it is a reasoning machine!")
+    st.write("""
+    To use it effectively:
+    - Provide specific context.
+    - Ask it to summarize, rewrite, or structure information.
+    - Avoid relying on it for absolute facts.
+    """)
+
+with st.expander("### Internet-Connected Generative AI"):
+    st.info("Some models fetch real-time information but still have limitations!")
+    st.write("""
+    Even with internet access:
+    - AI scans limited pages.
+    - Summarizes (not perfectly) the information.
+    - Verification of outputs is essential.
+    """)
+
+with st.expander("### Limitations in Reasoning and Problem-Solving"):
+    st.error("GenAI can make basic mistakes in math and logic!")
+    st.write("""
+    - GenAI operates probabilistically, not through mechanical algorithms.
+    - Mistakes happen even with simple tasks.
+    - Continuous improvement efforts are ongoing, but AI is not human-like in reasoning.
+    """)
+
+with st.expander("### How AI Processes Language"):
+    st.write("""
+    Generative AI does not see words — it sees numbers!
+    """)
+    st.table({
+        "Word": ["tree", "water", "Europe", "spoon"],
+        "Numeric Representation": ["395", "412", "2893", "1751"],
+        "Correlation": ["High with water", "High with tree", "Low with spoon", "Low with Europe"]
+    })
+
+with st.expander("### How Generative AI Forms Sentences"):
+    st.write("""
+    AI predicts the next word based on probabilities for 50,000+ options.
+    - Most probable words are selected.
+    - Some randomness is introduced, making outputs variable.
+    """)
+    st.caption("This is why prompt engineering matters!")
+
+with st.expander("### AI and Human Intelligence"):
+    st.write("""
+    Both humans and AI make irrational decisions, but for very different reasons:
+    - Humans: Emotional and social biases.
+    - AI: Statistical prediction based on training data.
+    """)
+    st.success("Understanding both systems helps us better navigate AI interactions.")
+
+st.markdown("---")
+
+st.subheader("🧠 Summary of Key Concepts")
+
+summary_points = {
+    "Concept": [
+        "Training on Data",
+        "Generating Words",
+        "Understanding Context",
+        "Transformer Models"
+    ],
+    "Details": [
+        "AI models are trained on vast but incomplete datasets.",
+        "AI predicts the most probable next word.",
+        "AI considers all previous words in a sentence.",
+        "Transformers enable contextual understanding and text generation."
+    ]
+}
+
+st.table(summary_points)
+
+st.info("""
+Putting it together — Pre-trained, Generative, and Transformer — we get **GPT**, the core of modern GenAI models.
+""")
+
+st.markdown("---")
+
+st.subheader("🚀 Conclusion")
+st.success("""
+Generative AI is a powerful tool, but it must be used carefully.
+Understand its processes, limitations, and strengths to maximize effectiveness.
+It is a reasoning assistant — not a replacement for human critical thinking!
+""")
+
+# Footer
+st.caption("Created with ❤️ using Streamlit.")
